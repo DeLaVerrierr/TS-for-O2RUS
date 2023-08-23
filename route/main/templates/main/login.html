@@ -1,0 +1,36 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+
+<div class="card shadow">
+    <div class="container">
+        <h2 class="signup-title">Войдите в свой аккаунт</h2>
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="form-group">
+                    {% if field.label_tag %}
+                        <label for="{{ field.id_for_label }}">
+                            {% if field.name == 'username' %}Имя пользователя{% endif %}
+                            {% if field.name == 'password' %}Пароль{% endif %}
+                        </label>
+                    {% endif %}
+                    {{ field }}
+                </div>
+            {% endfor %}
+            <button type="submit" class="login">Войти</button>
+        </form>
+        <div class="login-link">
+            <p>Ещё нет аккаунта? <a href="{% url 'register' %}">Зарегистрироваться</a></p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

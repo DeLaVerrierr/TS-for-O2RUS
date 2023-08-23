@@ -1,0 +1,25 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Детали маршрута: {{ route.name }}{% endblock %}
+
+
+{% block content %}
+
+<div class="image-container-home">
+    <img src="{% static 'main/img/IMG_0100.jpg' %}" alt="Front Fascia" class="full-width-image">
+
+    <div class="route-detail">
+        <h1>
+            Детали маршрута:<br>
+            {{ route.name }}
+        </h1>
+        <p>Начальная точка: {{ route.start_point }}</p>
+        <p>Конечная точка: {{ route.end_point }}</p>
+        <p>Общая масса: {{ route.total_weight }}</p>
+        <p>Высота автопоезда: {{ route.vehicle_height }}</p>
+        <p>Нагрузка на ось: {{ route.axle_load }}</p>
+
+    </div>
+</div>
+
+{% endblock %}

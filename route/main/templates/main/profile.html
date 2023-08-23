@@ -1,0 +1,32 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}profile{% endblock %}
+
+
+{% block content %}
+<div class="profile-wrapper">
+    <div class="container-profile">
+        <h2>Профиль</h2>
+        {% if user.username %}
+            <h3>{{ user.username }}</h3>
+            <a href="{% url 'edit_profile' %}" class="edit-profile-link">Редактировать профиль</a>
+        {% else %}
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_table }}
+                {% if form.errors %}
+                    <div class="error">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <p>{{ error }}</p>
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <button type="submit">Сохранить</button>
+            </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

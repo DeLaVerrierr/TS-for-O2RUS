@@ -1,0 +1,261 @@
+h1 {
+  text-align: center;
+}
+
+
+/* банер */
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 800;
+}
+
+.banner a {
+  text-decoration: none;
+  color: #db2234;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.banner a:not(:first-child):not(:last-child) {
+  margin: 0 20px;
+}
+/* Профлиль */
+
+.container-profile{
+    margin-top:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Профиль */
+
+
+/* Логин */
+
+.card {
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin: 150px auto;
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+              0 0  0 2px rgb(190, 190, 190),
+              0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+
+.container form button[type="submit"] {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  overflow: hidden;
+  background: #db2234;
+  color: ghostwhite;
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+
+}
+
+.container form button[type="submit"]:active {
+  background: #f76373;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-link {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+}
+.login {
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+    margin-left: 30px;
+}
+
+
+.login-link a {
+  color: #db2234;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #f76373;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.signup-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #db2234;
+}
+/* Логин */
+
+
+
+
+
+/* Выбор пути */
+
+.image-container-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.routes {
+    margin-top: 70px;
+}
+
+.full-width-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(5px);
+    z-index: -1;
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    color: white;
+    font-size: 100px;
+    margin-bottom: 20px;
+}
+
+
+.route-link {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+
+.route-link:active {
+    color: #db2234;
+}
+
+.routes {
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.routes h1 {
+    margin-bottom: 10px;
+}
+
+.routes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.routes li {
+    margin-bottom: 5px;
+}
+/* Выбор пути  */
+
+
+
+
+/* Детали пути */
+
+
+.route-detail {
+   padding: 20px;
+   margin: 20px auto;
+   max-width: 600px;
+}
+
+.route-detail h1 {
+   font-size: 40px;
+   margin-bottom: 10px;
+
+}
+
+.route-detail p {
+   margin-bottom: 5px;
+}
+
+.route-detail {
+    margin-top: 70px;
+}
+
+
+/* Детали пути */

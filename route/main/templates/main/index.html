@@ -1,0 +1,20 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+
+{% block content %}
+<div class="image-container-home">
+    <img src="{% static 'main/img/ffff.jpg' %}" alt="Front Fascia" class="full-width-image">
+
+
+    <div class="routes">
+        <div class="list"> Список маршрутов </div>
+            <ul class="custom-list">
+                 {% for route in routes %}
+                      <li><a href="{% url 'route_detail' route.id %}" class="route-link">{{ route.name }}</a></li>
+                 {% endfor %}
+            </ul>
+    </div>
+</div>
+{% endblock %}
