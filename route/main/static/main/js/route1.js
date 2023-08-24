@@ -12,15 +12,15 @@ var waypoints = [
     L.latLng(42.057669, 48.288776)  // Дембрент
 ];
 
-// Добавляем невидимые маркеры для Новосибирска и Омска
+// маркеры для Новосибирска и Омска
 for (var i = 1; i < waypoints.length - 1; i++) {
     L.marker(waypoints[i], {
         icon: L.divIcon({className: 'invisible-icon'}),
-        zIndexOffset: -1000 // Сдвиг z-index для скрытия маркеров под маршрутом
+        zIndexOffset: -1000
     }).addTo(map);
 }
 
-// Добавляем информацию о маршруте
+
 var route = L.Routing.control({
     waypoints: waypoints,
     routeWhileDragging: true,
@@ -30,11 +30,11 @@ var route = L.Routing.control({
     var distance = route.summary.totalDistance; // Расстояние в метрах
     var duration = route.summary.totalTime; // Время в секундах
 
-    // Преобразование времени в часы и минуты
+
     var hours = Math.floor(duration / 3600);
     var minutes = Math.floor((duration % 3600) / 60);
 
-    // Вывод информации на странице
+
     var infoDiv = document.createElement('div');
     infoDiv.innerHTML = 'Расстояние: ' + (distance / 1000).toFixed(2) + ' км<br>' +
                         'Время: ' + hours + ' ч ' + minutes + ' мин';

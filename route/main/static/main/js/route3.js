@@ -29,11 +29,11 @@ var route = L.Routing.control({
     var distance = route.summary.totalDistance; // Расстояние в метрах
     var duration = route.summary.totalTime; // Время в секундах
 
-    // Преобразование времени в часы и минуты
+
     var hours = Math.floor(duration / 3600);
     var minutes = Math.floor((duration % 3600) / 60);
 
-    // Вывод информации на странице
+
     var infoDiv = document.createElement('div');
     infoDiv.innerHTML = 'Расстояние: ' + (distance / 1000).toFixed(2) + ' км<br>' +
                         'Время: ' + hours + ' ч ' + minutes + ' мин';

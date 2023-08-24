@@ -19,7 +19,7 @@ var map = L.map('map').setView([47.222078, 39.720358], 6); //
         L.latLng(43.115542, 131.885494)  // Владик
     ];
 
-// Добавляем информацию о маршруте
+
 var route = L.Routing.control({
     waypoints: waypoints,
     routeWhileDragging: true,
@@ -29,7 +29,7 @@ var route = L.Routing.control({
     var distance = route.summary.totalDistance; // Расстояние в метрах
     var duration = route.summary.totalTime; // Время в секундах
 
-    // Преобразование времени в часы и минуты
+
     var hours = Math.floor(duration / 3600);
     var minutes = Math.floor((duration % 3600) / 60);
 
