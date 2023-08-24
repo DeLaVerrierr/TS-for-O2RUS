@@ -31,6 +31,8 @@ class Route(models.Model):
     total_weight = models.DecimalField(max_digits=10, decimal_places=2)
     vehicle_height = models.DecimalField(max_digits=10, decimal_places=2)
     axle_load = models.DecimalField(max_digits=10, decimal_places=2)
+    #RefuelingOnTheRoute = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
+

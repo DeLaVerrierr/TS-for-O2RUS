@@ -2,24 +2,33 @@
 {% load static %}
 {% block title %}Детали маршрута: {{ route.name }}{% endblock %}
 
-
 {% block content %}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
 
 <div class="image-container-home">
     <img src="{% static 'main/img/IMG_0100.jpg' %}" alt="Front Fascia" class="full-width-image">
-
     <div class="route-detail">
-        <h1>
-            Детали маршрута:<br>
-            {{ route.name }}
-        </h1>
-        <p>Начальная точка: {{ route.start_point }}</p>
-        <p>Конечная точка: {{ route.end_point }}</p>
-        <p>Общая масса: {{ route.total_weight }}</p>
-        <p>Высота автопоезда: {{ route.vehicle_height }}</p>
-        <p>Нагрузка на ось: {{ route.axle_load }}</p>
+    <h1>
+        Детали маршрута:<br>
+        {{ route.name }}
+    </h1>
+    <p>Начальная точка: {{ route.start_point }}</p>
+    <p>Конечная точка: {{ route.end_point }}</p>
 
-    </div>
 </div>
 
+<div id="map" style="width: 100%; height: 500px;"></div>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
+{% if request.path == '/route/1/' %}
+    <script src="{% static 'main/js/route1.js' %}"></script>
+{% elif request.path == '/route/2/' %}
+    <script src="{% static 'main/js/route2.js' %}"></script>
+{% elif request.path == '/route/3/' %}
+    <script src="{% static 'main/js/route3.js' %}"></script>
+{% endif %}
+    </div>
 {% endblock %}
+
