@@ -257,8 +257,9 @@ h1 {
     margin-top: 70px;
 }
 
-.invisible-icon {
-    display: none;
+.invisible-marker {
+    opacity: 0; /* Делаем маркер невидимым */
 }
+
 
 /* Детали пути */
