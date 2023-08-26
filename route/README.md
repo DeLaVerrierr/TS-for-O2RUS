@@ -21,25 +21,14 @@
 
    ```bash
    cd route
-   
 
-3. **Настройка базы данных**
 
-   ```bash
-   python manage.py migrate
-   
-
-4. **Создание суперпользователя**
-
-   ```bash
-   python manage.py createsuperuser
-
-4. **Запуск сервера (без Docker)**
+3. **Запуск сервера (без Docker)**
 
    ```bash
    python manage.py runserver
 
-5. **Сборка**
+4. **Сборка**
 
    ```bash
    docker-compose build
