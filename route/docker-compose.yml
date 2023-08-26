@@ -1,0 +1,28 @@
+version: '3.10'
+services:
+  web:
+    image: django_route:latest
+    container_name: django_route_container
+    volumes:
+      - static_volume:/route/static
+    command: >
+      sh -c "python route/manage.py collectstatic --noinput &&
+             python route/manage.py migrate &&
+             python route/manage.py runserver 127.0.0.1:8000"
+  nginx:
+      build:
+        dockerfile: ./Dockerfile
+        context: ./docker/nginx
+      container_name: django_route_nginx
+      image: django_route:latest
+      volumes:
+        - static_volume:/route/static
+      depends_on:
+        - web
+      ports:
+        - "8000:8000"
+
+
+
+volumes:
+  static_volume:
