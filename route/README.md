@@ -34,8 +34,18 @@
    ```bash
    python manage.py createsuperuser
 
-4. **Запуск сервера**
+4. **Запуск сервера (без Docker)**
 
    ```bash
    python manage.py runserver
 
+5. **Сборка**
+
+   ```bash
+   docker-compose build
+
+   
+5. **запуск через Docker Compose**
+
+   ```bash
+    docker-compose up
